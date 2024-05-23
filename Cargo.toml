@@ -12,5 +12,10 @@ name = "asciidoc"
 path = "src/main.rs"
 
 [dependencies]
-clap = "4.5.4"
+anyhow = "1.0.86"
+clap = { version = "4.5.4", features=["derive"] }
 nom = "7.1.3"
+thiserror = "1.0.61"
+tokio = { version = "1.37.0", features = ["full"] }
+tracing = { version = "0.1.40", features = ["log"] }
+tracing-subscriber = { version = "0.3.18", features = ["registry", "env-filter"] }

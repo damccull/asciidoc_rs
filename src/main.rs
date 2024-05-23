@@ -8,4 +8,6 @@ struct Args {
     name: String,
 }
 
-fn main() {}
+fn main() {
+    
+}
