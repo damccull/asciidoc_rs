@@ -1,0 +1,16 @@
+[package]
+name = "asciidoc"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "asciidoc"
+path = "src/lib.rs"
+
+[[bin]]
+name = "asciidoc"
+path = "src/main.rs"
+
+[dependencies]
+clap = "4.5.4"
+nom = "7.1.3"
