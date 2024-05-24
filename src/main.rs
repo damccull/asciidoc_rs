@@ -18,14 +18,12 @@ struct Cli {
 #[derive(Copy, Clone, PartialEq, Eq, PartialOrd, Ord, ValueEnum)]
 enum OutputFormat {
     Html,
-    Markdown,
 }
 
 impl std::fmt::Display for OutputFormat {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         let out = match self {
             OutputFormat::Html => "html",
-            OutputFormat::Markdown => "markdown",
         };
         write!(f, "{}", out)
     }
