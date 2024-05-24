@@ -1,3 +1,5 @@
+pub mod telemetry;
+
 trait TreeNode {}
 
 pub struct DocumentTree {
