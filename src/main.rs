@@ -40,13 +40,14 @@ async fn main() -> anyhow::Result<()> {
     let subscriber = get_subscriber("asciidoc".into(), "info".into(), std::io::stdout);
     init_subscriber(subscriber);
 
-    start().await
+    run().await
 }
 
 #[tracing::instrument]
-async fn start() -> anyhow::Result<()> {
+async fn run() -> anyhow::Result<()> {
     let cli = Cli::parse();
 
+    tracing::debug!("Arguments parsed");
     println!("Output format: {}", cli.format);
 
     println!("File to parse: {}", cli.file.display());
